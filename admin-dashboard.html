@@ -1,0 +1,1517 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chika Kids - Admin Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        :root {
+            --primary: #292826;
+            --pink: #ff4f91;
+            --pink-dark: #e52d70;
+            --blue: #65b7e8;
+            --cream: #fff8f2;
+            --text: #292929;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Tajawal", Arial, sans-serif;
+            background: #fff;
+            color: var(--text);
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(90deg, #292826, #3b3840);
+            color: white;
+            padding: 15px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .header-btn {
+            border: 0;
+            border-radius: 8px;
+            padding: 10px 15px;
+
+            color: white;
+            font-family: inherit;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        #refreshBtn {
+            background: var(--pink);
+        }
+
+        #logoutBtn {
+            background: #dc3545;
+        }
+
+        .header-btn:hover {
+            opacity: .9;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        .welcome {
+            background: linear-gradient(90deg, #fff0f6, #eef9ff);
+
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+
+            text-align: center;
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+            color: var(--pink-dark);
+            font-weight: 800;
+        }
+
+        .welcome p {
+            margin-bottom: 0;
+        }
+
+        /* TITLE */
+
+        .section-heading {
+            text-align: center;
+
+            font-size: 28px;
+            font-weight: 800;
+
+            margin: 30px 0 25px;
+        }
+
+        .section-heading::after {
+            content: "";
+
+            display: block;
+
+            width: 80px;
+            height: 4px;
+
+            background: linear-gradient(
+                90deg,
+                var(--pink),
+                var(--blue)
+            );
+
+            margin: 10px auto 0;
+
+            border-radius: 5px;
+        }
+
+        /* PRODUCTS */
+
+        #productsContainer {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+        .product-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,.10);
+
+            border: 1px solid #f1f1f1;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.15);
+        }
+
+        /* IMAGE */
+
+        .product-image-wrapper {
+            position: relative;
+
+            width: 100%;
+            height: 250px;
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+            background: #f7f7f7;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .3s ease;
+        }
+
+        .product-image-wrapper:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        /* EDIT OVERLAY */
+
+        .edit-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0,0,0,.45);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            opacity: 0;
+
+            transition: .25s;
+
+            color: white;
+
+            font-size: 19px;
+
+            font-weight: 800;
+        }
+
+        .product-image-wrapper:hover .edit-overlay {
+            opacity: 1;
+        }
+
+        /* PRODUCT INFO */
+
+        .product-info {
+            padding: 15px;
+
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 17px;
+
+            font-weight: 800;
+
+            margin: 0 0 8px;
+
+            min-height: 48px;
+        }
+
+        .product-category {
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: var(--pink-dark);
+
+            font-size: 20px;
+
+            font-weight: 800;
+        }
+
+        /* ADMIN BUTTONS */
+
+        .product-actions {
+            display: flex;
+
+            gap: 8px;
+
+            padding: 0 15px 15px;
+        }
+
+        .action-btn {
+            flex: 1;
+
+            border: 0;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background: #3498db;
+        }
+
+        .delete-btn {
+            background: #e74c3c;
+        }
+
+        .action-btn:hover {
+            opacity: .9;
+        }
+
+        /* MESSAGE */
+
+        #message {
+            text-align: center;
+
+            margin: 25px 0;
+
+            font-weight: 700;
+
+            color: #777;
+        }
+
+        /* MODAL */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 5000;
+
+            background: rgba(0,0,0,.65);
+
+            padding: 15px;
+
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+
+            width: 100%;
+
+            max-width: 650px;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            position: relative;
+
+            max-height: 95vh;
+
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+
+            color: var(--pink-dark);
+
+            font-weight: 800;
+        }
+
+        #closeModal {
+            width: 38px;
+            height: 38px;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background: #eee;
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+        /* FORM */
+
+        .form-group {
+            margin-bottom: 16px;
+
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: 800;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 9px;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--pink);
+
+            box-shadow:
+                0 0 0 3px rgba(255,79,145,.12);
+        }
+
+        .form-group textarea {
+            min-height: 110px;
+
+            resize: vertical;
+        }
+
+        .save-btn {
+            width: 100%;
+
+            border: 0;
+
+            border-radius: 10px;
+
+            padding: 14px;
+
+            background: #27ae60;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 16px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+        .save-btn:hover {
+            background: #219150;
+        }
+
+        .save-btn:disabled {
+            background: #999;
+
+            cursor: not-allowed;
+        }
+
+        #editMessage {
+            text-align: center;
+
+            margin-top: 12px;
+
+            font-weight: 800;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 992px) {
+
+            #productsContainer {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 18px;
+            }
+
+            #productsContainer {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 14px;
+            }
+
+            .product-image-wrapper {
+                height: 200px;
+            }
+
+            .product-name {
+                font-size: 14px;
+            }
+
+            .product-price {
+                font-size: 17px;
+            }
+
+            .action-btn {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+        }
+
+        @media (max-width: 400px) {
+
+            #productsContainer {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 10px;
+            }
+
+            .product-image-wrapper {
+                height: 170px;
+            }
+
+            .product-info {
+                padding: 10px;
+            }
+
+            .product-actions {
+                padding: 0 10px 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        🧸 Chika Kids - لوحة التحكم
+    </h1>
+
+    <div class="header-actions">
+
+        <button
+            id="refreshBtn"
+            class="header-btn">
+            🔄 تحديث
+        </button>
+
+        <button
+            id="logoutBtn"
+            class="header-btn">
+            🚪 تسجيل الخروج
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="container">
+
+    <div class="welcome">
+
+        <h2>
+            مرحبًا بك في لوحة التحكم 👋
+        </h2>
+
+        <p>
+            يمكنك تعديل أو حذف أي منتج من هنا.
+        </p>
+
+    </div>
+
+
+    <h2 class="section-heading">
+        منتجات Chika Kids 🧸
+    </h2>
+
+
+    <div id="productsContainer"></div>
+
+
+    <div id="message">
+        جاري تحميل المنتجات...
+    </div>
+
+</div>
+
+
+<!-- EDIT MODAL -->
+
+<div id="editModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                ✏️ تعديل المنتج
+            </h2>
+
+            <button id="closeModal">
+                ✖
+            </button>
+
+        </div>
+
+
+        <form id="editForm">
+
+            <input
+                type="hidden"
+                id="editId">
+
+
+            <div class="form-group">
+
+                <label>
+                    اسم المنتج
+                </label>
+
+                <input
+                    type="text"
+                    id="editName"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    السعر (DA)
+                </label>
+
+                <input
+                    type="number"
+                    id="editPrice"
+                    min="0"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    وصف المنتج
+                </label>
+
+                <textarea
+                    id="editDescription"></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    رابط الصورة
+                </label>
+
+                <input
+                    type="text"
+                    id="editImage"
+                    placeholder="images2/kids1.jpg">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    التصنيف
+                </label>
+
+                <input
+                    type="text"
+                    id="editCategory"
+                    placeholder="ملابس البنات">
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="save-btn"
+                id="saveBtn">
+
+                💾 حفظ التعديلات
+
+            </button>
+
+
+            <div id="editMessage"></div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script>
+
+const API_URL = "/api";
+
+const token =
+    localStorage.getItem("adminToken");
+
+
+/* =========================
+   CHECK LOGIN
+========================= */
+
+if (!token) {
+
+    window.location.href =
+        "admin-login.html";
+
+}
+
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const productsContainer =
+    document.getElementById(
+        "productsContainer"
+    );
+
+const message =
+    document.getElementById(
+        "message"
+    );
+
+const editModal =
+    document.getElementById(
+        "editModal"
+    );
+
+const editForm =
+    document.getElementById(
+        "editForm"
+    );
+
+const editId =
+    document.getElementById(
+        "editId"
+    );
+
+const editName =
+    document.getElementById(
+        "editName"
+    );
+
+const editPrice =
+    document.getElementById(
+        "editPrice"
+    );
+
+const editDescription =
+    document.getElementById(
+        "editDescription"
+    );
+
+const editImage =
+    document.getElementById(
+        "editImage"
+    );
+
+const editCategory =
+    document.getElementById(
+        "editCategory"
+    );
+
+const editMessage =
+    document.getElementById(
+        "editMessage"
+    );
+
+const saveBtn =
+    document.getElementById(
+        "saveBtn"
+    );
+
+
+/* =========================
+   LOAD PRODUCTS
+========================= */
+
+async function loadProducts() {
+
+    productsContainer.innerHTML = "";
+
+    message.textContent =
+        "جاري تحميل المنتجات...";
+
+
+    try {
+
+        const response =
+            await fetch(
+                `${API_URL}/products`
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "Products API:",
+            data
+        );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Failed to load products"
+            );
+
+        }
+
+
+        const products =
+            Array.isArray(data.products)
+                ? data.products
+                : [];
+
+
+        if (!products.length) {
+
+            message.textContent =
+                "لا توجد منتجات حاليًا.";
+
+            return;
+
+        }
+
+
+        message.textContent = "";
+
+
+        products.forEach(product => {
+
+            createProductCard(product);
+
+        });
+
+
+    } catch (error) {
+
+        console.error(
+            "Load products error:",
+            error
+        );
+
+        message.textContent =
+            "❌ تعذر تحميل المنتجات: " +
+            error.message;
+
+    }
+
+}
+
+
+/* =========================
+   CREATE PRODUCT CARD
+========================= */
+
+function createProductCard(product) {
+
+    const card =
+        document.createElement("div");
+
+    card.className =
+        "product-card";
+
+
+    const imageWrapper =
+        document.createElement("div");
+
+    imageWrapper.className =
+        "product-image-wrapper";
+
+
+    const image =
+        document.createElement("img");
+
+    image.className =
+        "product-image";
+
+    /*
+       مهم:
+       قاعدة البيانات تستخدم image
+       وليس image_url
+    */
+
+    image.src =
+        product.image || "";
+
+    image.alt =
+        product.name || "منتج";
+
+
+    /*
+       إذا كانت الصورة غير موجودة
+       نعرض صورة بديلة
+    */
+
+    image.onerror =
+        function() {
+
+            this.onerror = null;
+
+            this.src =
+                "images2/kids1.jpg";
+
+        };
+
+
+    const overlay =
+        document.createElement("div");
+
+    overlay.className =
+        "edit-overlay";
+
+    overlay.innerHTML =
+        "✏️ اضغط لتعديل المنتج";
+
+
+    imageWrapper.appendChild(image);
+
+    imageWrapper.appendChild(overlay);
+
+
+    imageWrapper.addEventListener(
+        "click",
+        function() {
+
+            openEdit(product.id);
+
+        }
+    );
+
+
+    /* PRODUCT INFO */
+
+    const info =
+        document.createElement("div");
+
+    info.className =
+        "product-info";
+
+
+    const name =
+        document.createElement("p");
+
+    name.className =
+        "product-name";
+
+    name.textContent =
+        product.name || "";
+
+
+    const category =
+        document.createElement("div");
+
+    category.className =
+        "product-category";
+
+    category.textContent =
+        product.category ||
+        "بدون تصنيف";
+
+
+    const price =
+        document.createElement("div");
+
+    price.className =
+        "product-price";
+
+    price.textContent =
+        Number(
+            product.price || 0
+        ).toLocaleString("fr-DZ")
+        + " DA";
+
+
+    info.appendChild(name);
+
+    info.appendChild(category);
+
+    info.appendChild(price);
+
+
+    /* ACTIONS */
+
+    const actions =
+        document.createElement("div");
+
+    actions.className =
+        "product-actions";
+
+
+    const editBtn =
+        document.createElement("button");
+
+    editBtn.className =
+        "action-btn edit-btn";
+
+    editBtn.innerHTML =
+        "✏️ تعديل";
+
+
+    editBtn.addEventListener(
+        "click",
+        function() {
+
+            openEdit(product.id);
+
+        }
+    );
+
+
+    const deleteBtn =
+        document.createElement("button");
+
+    deleteBtn.className =
+        "action-btn delete-btn";
+
+    deleteBtn.innerHTML =
+        "🗑️ حذف";
+
+
+    deleteBtn.addEventListener(
+        "click",
+        function() {
+
+            deleteProduct(product.id);
+
+        }
+    );
+
+
+    actions.appendChild(editBtn);
+
+    actions.appendChild(deleteBtn);
+
+
+    card.appendChild(
+        imageWrapper
+    );
+
+    card.appendChild(
+        info
+    );
+
+    card.appendChild(
+        actions
+    );
+
+
+    productsContainer.appendChild(
+        card
+    );
+
+}
+
+
+/* =========================
+   OPEN EDIT
+========================= */
+
+async function openEdit(id) {
+
+    editMessage.textContent =
+        "جاري تحميل بيانات المنتج...";
+
+    editMessage.style.color =
+        "#777";
+
+
+    editModal.classList.add(
+        "active"
+    );
+
+
+    try {
+
+        const response =
+            await fetch(
+                `${API_URL}/products/${id}`
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Failed to get product"
+            );
+
+        }
+
+
+        const product =
+            data.product;
+
+
+        if (!product) {
+
+            throw new Error(
+                "المنتج غير موجود"
+            );
+
+        }
+
+
+        editId.value =
+            product.id || "";
+
+        editName.value =
+            product.name || "";
+
+        editPrice.value =
+            product.price ?? "";
+
+        editDescription.value =
+            product.description || "";
+
+        /*
+           مهم:
+           نستعمل image
+           وليس image_url
+        */
+
+        editImage.value =
+            product.image || "";
+
+        editCategory.value =
+            product.category || "";
+
+
+        editMessage.textContent = "";
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        editMessage.style.color =
+            "red";
+
+        editMessage.textContent =
+            "❌ تعذر تحميل بيانات المنتج: " +
+            error.message;
+
+    }
+
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeEditModal() {
+
+    editModal.classList.remove(
+        "active"
+    );
+
+    editForm.reset();
+
+    editMessage.textContent = "";
+
+}
+
+
+document
+    .getElementById("closeModal")
+    .addEventListener(
+        "click",
+        closeEditModal
+    );
+
+
+editModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === editModal
+        ) {
+
+            closeEditModal();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   UPDATE PRODUCT
+========================= */
+
+editForm.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        const id =
+            editId.value;
+
+
+        const updatedProduct = {
+
+            name:
+                editName.value.trim(),
+
+            price:
+                Number(
+                    editPrice.value
+                ),
+
+            description:
+                editDescription.value.trim(),
+
+            /*
+               مهم:
+               image وليس image_url
+            */
+
+            image:
+                editImage.value.trim(),
+
+            category:
+                editCategory.value.trim()
+
+        };
+
+
+        if (!id) {
+
+            editMessage.style.color =
+                "red";
+
+            editMessage.textContent =
+                "❌ معرف المنتج غير موجود.";
+
+            return;
+
+        }
+
+
+        saveBtn.disabled = true;
+
+        saveBtn.textContent =
+            "⏳ جاري الحفظ...";
+
+
+        editMessage.textContent = "";
+
+
+        try {
+
+            const response =
+                await fetch(
+                    `${API_URL}/products/${id}`,
+                    {
+
+                        method: "PUT",
+
+                        headers: {
+
+                            "Content-Type":
+                                "application/json",
+
+                            "Authorization":
+                                `Bearer ${token}`
+
+                        },
+
+                        body:
+                            JSON.stringify(
+                                updatedProduct
+                            )
+
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "Update response:",
+                data
+            );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.message ||
+                    "Failed to update product"
+                );
+
+            }
+
+
+            editMessage.style.color =
+                "green";
+
+            editMessage.textContent =
+                "✅ تم تعديل المنتج بنجاح";
+
+
+            await loadProducts();
+
+
+            setTimeout(
+                closeEditModal,
+                1000
+            );
+
+
+        } catch (error) {
+
+            console.error(error);
+
+            editMessage.style.color =
+                "red";
+
+            editMessage.textContent =
+                "❌ فشل تعديل المنتج: " +
+                error.message;
+
+        } finally {
+
+            saveBtn.disabled = false;
+
+            saveBtn.textContent =
+                "💾 حفظ التعديلات";
+
+        }
+
+    }
+);
+
+
+/* =========================
+   DELETE PRODUCT
+========================= */
+
+async function deleteProduct(id) {
+
+    const confirmed =
+        confirm(
+            "هل أنت متأكد من حذف هذا المنتج؟"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    try {
+
+        const response =
+            await fetch(
+                `${API_URL}/products/${id}`,
+                {
+
+                    method: "DELETE",
+
+                    headers: {
+
+                        "Authorization":
+                            `Bearer ${token}`
+
+                    }
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.message ||
+                "Failed to delete product"
+            );
+
+        }
+
+
+        alert(
+            "✅ تم حذف المنتج بنجاح"
+        );
+
+
+        await loadProducts();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "❌ فشل حذف المنتج: " +
+            error.message
+        );
+
+    }
+
+}
+
+
+/* =========================
+   REFRESH
+========================= */
+
+document
+    .getElementById("refreshBtn")
+    .addEventListener(
+        "click",
+        loadProducts
+    );
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+document
+    .getElementById("logoutBtn")
+    .addEventListener(
+        "click",
+        function() {
+
+            localStorage.removeItem(
+                "adminToken"
+            );
+
+            window.location.href =
+                "admin-login.html";
+
+        }
+    );
+
+
+/* =========================
+   START
+========================= */
+
+loadProducts();
+
+</script>
+
+</body>
+</html>
+```

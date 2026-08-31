@@ -1,0 +1,3474 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chika Kids | ملابس الأطفال</title>
+
+  <meta name="description"
+        content="Chika Kids متجر ملابس الأطفال: ملابس بنات وأولاد، أطقم، فساتين، ملابس مواليد وإكسسوارات، مع التوصيل إلى 58 ولاية والدفع عند الاستلام.">
+
+  <meta name="keywords"
+        content="ملابس أطفال, ملابس بنات, ملابس أولاد, فساتين أطفال, أطقم أطفال, ملابس مواليد, Chika Kids, الجزائر">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.chika-store.com/">
+
+  <link rel="icon"
+        href="images2/html.gnn.png"
+        type="image/png">
+
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+
+  <!-- BOOTSTRAP -->
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+
+
+  <!-- BOOTSTRAP ICONS -->
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+  <!-- SWIPER -->
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+  <!-- SEO SCHEMA -->
+
+  <script type="application/ld+json">
+
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Chika Kids",
+    "description": "متجر إلكتروني متخصص في ملابس الأطفال",
+    "url": "https://www.chika-store.com/",
+    "sameAs": [
+      "https://facebook.com/Chikastore",
+      "https://instagram.com/Chikastore"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DZ"
+    }
+  }
+
+  </script>
+
+
+  <style>
+
+    /* ==================================================
+       GENERAL
+    ================================================== */
+
+    :root {
+
+      --primary: #292826;
+
+      --pink: #ff4f91;
+
+      --pink-dark: #e52d70;
+
+      --blue: #65b7e8;
+
+      --yellow: #ffd45c;
+
+      --cream: #fff8f2;
+
+      --text: #292929;
+
+      --card: #ffffff;
+
+      --light-pink: #fff0f6;
+
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      font-family: "Tajawal", Arial, sans-serif;
+
+      direction: rtl;
+
+      text-align: center;
+
+      color: var(--text);
+
+      background: #fff;
+
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+
+
+    /* ==================================================
+       ADMIN BAR
+    ================================================== */
+
+    .admin-bar {
+
+      display: none;
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 3000;
+
+      background: #292826;
+
+      color: #fff;
+
+      padding: 10px 15px;
+
+      box-shadow: 0 3px 15px rgba(0,0,0,.25);
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      text-align: center;
+
+    }
+
+
+    .admin-info {
+
+      color: #ffd45c;
+
+      font-weight: 800;
+
+      font-size: 15px;
+
+    }
+
+
+    .admin-actions {
+
+      display: flex;
+
+      gap: 8px;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+    }
+
+
+    .admin-actions button {
+
+      border: 0;
+
+      border-radius: 8px;
+
+      padding: 7px 13px;
+
+      background: var(--pink);
+
+      color: #fff;
+
+      font-family: inherit;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: .2s;
+
+    }
+
+
+    .admin-actions button:hover {
+
+      background: var(--pink-dark);
+
+      transform: translateY(-1px);
+
+    }
+
+
+    .admin-actions .logout-btn {
+
+      background: #dc3545;
+
+    }
+
+
+    .admin-actions .logout-btn:hover {
+
+      background: #bb2d3b;
+
+    }
+
+
+
+    /* ==================================================
+       TOP HEADER
+    ================================================== */
+
+    .top-header {
+
+      background: linear-gradient(
+        90deg,
+        #ff7aa9,
+        #ff4f91,
+        #65b7e8
+      );
+
+      color: #fff;
+
+      padding: 12px 10px;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .top-header strong {
+
+      font-size: 18px;
+
+      display: block;
+
+    }
+
+
+
+    /* ==================================================
+       NAVBAR
+    ================================================== */
+
+    .navbar {
+
+      background: var(--primary) !important;
+
+      min-height: 64px;
+
+    }
+
+
+    .navbar-brand img {
+
+      width: 48px;
+
+      height: 48px;
+
+      object-fit: contain;
+
+      border-radius: 10px;
+
+    }
+
+
+    .brand-name {
+
+      color: #fff;
+
+      font-weight: 800;
+
+      margin-right: 8px;
+
+      font-size: 20px;
+
+    }
+
+
+    .brand-name span {
+
+      color: var(--pink);
+
+    }
+
+
+
+    /* ==================================================
+       CART
+    ================================================== */
+
+    .cart-link {
+
+      position: relative;
+
+      color: #fff;
+
+      font-size: 23px;
+
+      margin-right: 15px;
+
+      transition: .2s;
+
+    }
+
+
+    .cart-link:hover {
+
+      color: var(--pink);
+
+    }
+
+
+    #cart-count {
+
+      position: absolute;
+
+      top: -8px;
+
+      right: -10px;
+
+      min-width: 19px;
+
+      height: 19px;
+
+      padding: 1px 5px;
+
+      background: #ff3030;
+
+      color: #fff;
+
+      border-radius: 50%;
+
+      font-size: 10px;
+
+      display: none;
+
+      line-height: 17px;
+
+      font-weight: 700;
+
+    }
+
+
+
+    /* ==================================================
+       MENU BUTTON
+    ================================================== */
+
+    .menu-btn {
+
+      position: fixed;
+
+      top: 76px;
+
+      left: 12px;
+
+      z-index: 1003;
+
+      border: 0;
+
+      background: var(--pink);
+
+      color: #fff;
+
+      border-radius: 10px;
+
+      padding: 8px 12px;
+
+      font-size: 15px;
+
+      cursor: pointer;
+
+      box-shadow: 0 3px 12px rgba(0,0,0,.18);
+
+      transition: .2s;
+
+    }
+
+
+    .menu-btn:hover {
+
+      background: var(--pink-dark);
+
+      transform: translateY(-2px);
+
+    }
+
+
+
+    /* ==================================================
+       SIDEBAR
+    ================================================== */
+
+    .sidebar {
+
+      width: 310px;
+
+      max-width: 90vw;
+
+      height: 100vh;
+
+      position: fixed;
+
+      top: 0;
+
+      right: -320px;
+
+      background: #fff;
+
+      z-index: 1002;
+
+      padding: 20px;
+
+      box-shadow: -5px 0 20px rgba(0,0,0,.2);
+
+      transition: right .3s ease;
+
+      text-align: right;
+
+      overflow-y: auto;
+
+    }
+
+
+    .sidebar.active {
+
+      right: 0;
+
+    }
+
+
+    .sidebar-header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      border-bottom: 1px solid #eee;
+
+      padding-bottom: 12px;
+
+    }
+
+
+    .sidebar-title {
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      color: var(--pink-dark);
+
+    }
+
+
+    .close-btn {
+
+      border: 0;
+
+      background: transparent;
+
+      font-size: 24px;
+
+      cursor: pointer;
+
+      color: #333;
+
+    }
+
+
+
+    /* ==================================================
+       SEARCH
+    ================================================== */
+
+    .search-box {
+
+      position: relative;
+
+    }
+
+
+    .search-box input {
+
+      border-radius: 12px;
+
+      padding: 11px;
+
+      border: 1px solid #ddd;
+
+    }
+
+
+    .search-box input:focus {
+
+      border-color: var(--pink);
+
+      box-shadow: 0 0 0 3px rgba(255,79,145,.12);
+
+    }
+
+
+    .sidebar ul {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin-top: 20px;
+
+    }
+
+
+    .sidebar li {
+
+      margin: 7px 0;
+
+    }
+
+
+    .sidebar a {
+
+      color: #333;
+
+      font-size: 17px;
+
+      display: block;
+
+      padding: 11px;
+
+      border-radius: 10px;
+
+      transition: .2s;
+
+    }
+
+
+    .sidebar a:hover {
+
+      background: var(--light-pink);
+
+      color: var(--pink-dark);
+
+      transform: translateX(-3px);
+
+    }
+
+
+    .sidebar a i {
+
+      margin-left: 7px;
+
+      color: var(--pink-dark);
+
+    }
+
+
+    .admin-link {
+
+      background: linear-gradient(
+        90deg,
+        #fff0f6,
+        #fff8fb
+      );
+
+      border: 1px solid #ffd1e2;
+
+      color: var(--pink-dark) !important;
+
+      font-weight: 800;
+
+    }
+
+
+
+    /* ==================================================
+       OVERLAY
+    ================================================== */
+
+    .overlay {
+
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,.5);
+
+      z-index: 1001;
+
+      display: none;
+
+    }
+
+
+    .overlay.active {
+
+      display: block;
+
+    }
+
+
+
+    /* ==================================================
+       MOVING TEXT
+    ================================================== */
+
+    .moving-text {
+
+      width: 100%;
+
+      overflow: hidden;
+
+      white-space: nowrap;
+
+      background: #fff0f6;
+
+      color: #ad1457;
+
+      padding: 7px 0;
+
+      font-size: 14px;
+
+    }
+
+
+    .text-content {
+
+      display: inline-block;
+
+      animation: scrollText 22s linear infinite;
+
+    }
+
+
+    @keyframes scrollText {
+
+      from {
+
+        transform: translateX(-100%);
+
+      }
+
+      to {
+
+        transform: translateX(100%);
+
+      }
+
+    }
+
+
+
+    /* ==================================================
+       HERO
+    ================================================== */
+
+    .hero {
+
+      width: 100%;
+
+      overflow: hidden;
+
+    }
+
+
+    .hero img {
+
+      width: 100%;
+
+      display: block;
+
+      max-height: 520px;
+
+      object-fit: cover;
+
+    }
+
+
+
+    /* ==================================================
+       PROMO
+    ================================================== */
+
+    .promo {
+
+      background: linear-gradient(
+        90deg,
+        #fff2f7,
+        #eef9ff
+      );
+
+      padding: 25px 15px;
+
+      margin: 20px 0;
+
+    }
+
+
+    .promo h2 {
+
+      color: #d22b6b;
+
+      font-weight: 800;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .promo p {
+
+      margin: 0;
+
+      font-size: 16px;
+
+    }
+
+
+
+    /* ==================================================
+       SECTION TITLE
+    ================================================== */
+
+    .section-heading {
+
+      font-size: clamp(1.4rem, 4vw, 2rem);
+
+      font-weight: 800;
+
+      margin: 35px 0 20px;
+
+    }
+
+
+    .section-heading::after {
+
+      content: "";
+
+      display: block;
+
+      width: 80px;
+
+      height: 4px;
+
+      background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--blue)
+      );
+
+      margin: 10px auto 0;
+
+      border-radius: 5px;
+
+    }
+
+
+
+    /* ==================================================
+       SWIPER
+    ================================================== */
+
+    .swiper {
+
+      width: 100%;
+
+      padding: 15px 25px 45px;
+
+    }
+
+
+    .special-card {
+
+      width: 250px;
+
+      height: 330px;
+
+      background: #fff;
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,.10);
+
+      cursor: pointer;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+      border: 1px solid #f2f2f2;
+
+    }
+
+
+    .special-card:hover {
+
+      transform: translateY(-5px);
+
+      box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+    }
+
+
+    .special-card img {
+
+      width: 100%;
+
+      height: 210px;
+
+      object-fit: cover;
+
+      display: block;
+
+    }
+
+
+    .card-title {
+
+      font-size: 1rem;
+
+      font-weight: 700;
+
+      padding: 12px 8px 4px;
+
+      margin: 0;
+
+      min-height: 55px;
+
+    }
+
+
+    .price {
+
+      color: var(--pink-dark);
+
+      font-weight: 800;
+
+      font-size: 1.1rem;
+
+      margin: 5px;
+
+    }
+
+
+
+    /* ==================================================
+       CATEGORY CARDS
+    ================================================== */
+
+    .category-card {
+
+      border: 0;
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      background: #fff;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,.09);
+
+      transition: transform .25s ease;
+
+      height: 100%;
+
+    }
+
+
+    .category-card:hover {
+
+      transform: translateY(-5px);
+
+    }
+
+
+    .category-card img {
+
+      width: 100%;
+
+      height: 230px;
+
+      object-fit: cover;
+
+    }
+
+
+    .category-card .card-body {
+
+      padding: 15px;
+
+    }
+
+
+    .category-card h3 {
+
+      font-size: 1.15rem;
+
+      font-weight: 800;
+
+    }
+
+
+    .btn-kids {
+
+      background: var(--pink);
+
+      color: #fff;
+
+      border: 0;
+
+      border-radius: 25px;
+
+      padding: 8px 20px;
+
+      font-weight: 700;
+
+    }
+
+
+    .btn-kids:hover {
+
+      background: var(--pink-dark);
+
+      color: #fff;
+
+    }
+
+
+
+    /* ==================================================
+       FEATURES
+    ================================================== */
+
+    .features {
+
+      background: #fff8fb;
+
+      padding: 35px 15px;
+
+      margin-top: 35px;
+
+    }
+
+
+    .feature-box {
+
+      padding: 15px;
+
+    }
+
+
+    .feature-box i {
+
+      font-size: 32px;
+
+      color: var(--pink);
+
+    }
+
+
+    .feature-box h4 {
+
+      font-size: 1rem;
+
+      font-weight: 800;
+
+      margin-top: 8px;
+
+    }
+
+
+    .feature-box p {
+
+      margin-bottom: 0;
+
+      font-size: 14px;
+
+    }
+
+
+
+    /* ==================================================
+       INFORMATION
+    ================================================== */
+
+    .hidden-section {
+
+      display: none;
+
+      background: #fff;
+
+      padding: 25px;
+
+      margin: 25px auto;
+
+      max-width: 900px;
+
+      border-radius: 16px;
+
+      box-shadow: 0 4px 20px rgba(0,0,0,.08);
+
+      text-align: right;
+
+      line-height: 1.9;
+
+    }
+
+
+    .hidden-section h2 {
+
+      color: var(--pink-dark);
+
+      font-weight: 800;
+
+    }
+
+
+    .classic-menu {
+
+      list-style: none;
+
+      padding: 0;
+
+      margin: 30px 0;
+
+    }
+
+
+    .classic-menu li {
+
+      margin: 12px;
+
+    }
+
+
+    .classic-menu a {
+
+      color: #444;
+
+      font-size: 1.1rem;
+
+      font-weight: 700;
+
+    }
+
+
+    .classic-menu a:hover {
+
+      color: var(--pink-dark);
+
+    }
+
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    footer {
+
+      background: linear-gradient(
+        90deg,
+        #292826,
+        #3b3840
+      );
+
+      color: #fff;
+
+      padding: 35px 15px;
+
+      margin-top: 30px;
+
+      line-height: 2;
+
+      font-size: 13px;
+
+    }
+
+
+    .footer-brand {
+
+      color: var(--pink);
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+    }
+
+
+
+    /* ==================================================
+       MOBILE
+    ================================================== */
+
+    @media (max-width: 768px) {
+
+      .menu-btn {
+
+        top: 72px;
+
+        left: 8px;
+
+      }
+
+
+      .special-card {
+
+        width: 170px;
+
+        height: 285px;
+
+      }
+
+
+      .special-card img {
+
+        height: 165px;
+
+      }
+
+
+      .card-title {
+
+        font-size: .85rem;
+
+        min-height: 60px;
+
+      }
+
+
+      .category-card img {
+
+        height: 180px;
+
+      }
+
+
+      .hero img {
+
+        min-height: 180px;
+
+        object-fit: cover;
+
+      }
+
+    }
+
+
+
+    @media (max-width: 480px) {
+
+      .top-header {
+
+        font-size: 12px;
+
+      }
+
+
+      .top-header strong {
+
+        font-size: 16px;
+
+      }
+
+
+      .swiper {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+      }
+
+
+      .special-card {
+
+        width: 155px;
+
+        height: 270px;
+
+      }
+
+
+      .special-card img {
+
+        height: 150px;
+
+      }
+
+
+      .price {
+
+        font-size: 1rem;
+
+      }
+
+
+      .brand-name {
+
+        font-size: 17px;
+
+      }
+
+
+      .admin-bar {
+
+        flex-direction: column;
+
+      }
+
+
+      .admin-actions button {
+
+        font-size: 11px;
+
+        padding: 6px 8px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     ADMIN BAR
+================================================== -->
+
+<div id="adminBar" class="admin-bar">
+
+  <div class="admin-info">
+
+    🔐 لوحة تحكم الإدارة
+
+  </div>
+
+
+  <div class="admin-actions">
+
+    <button onclick="openAdminProducts()">
+
+      ✏️ تعديل المنتجات
+
+    </button>
+
+
+    <button onclick="addNewProduct()">
+
+      ➕ إضافة منتج
+
+    </button>
+
+
+    <button
+      class="logout-btn"
+      onclick="adminLogout()">
+
+      🚪 تسجيل الخروج
+
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     TOP HEADER
+================================================== -->
+
+<header class="top-header">
+
+  🧸
+
+  <strong>
+    Chika Kids
+  </strong>
+
+  ملابس أطفال أنيقة ومريحة لكل مناسبة 👗👕
+
+  <br>
+
+  توصيل إلى 58 ولاية 🚚 |
+
+  الدفع عند الاستلام 💳
+
+</header>
+
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav class="navbar navbar-dark">
+
+  <div class="container d-flex align-items-center justify-content-between">
+
+
+    <a
+      class="navbar-brand d-flex align-items-center"
+      href="index.html">
+
+      <img
+        src="images2/html.gnn.jpg"
+        alt="شعار Chika Kids"
+        loading="lazy">
+
+
+      <span class="brand-name">
+
+        Chika <span>Kids</span>
+
+      </span>
+
+    </a>
+
+
+
+    <div class="d-flex align-items-center">
+
+      <a
+        href="cart.html"
+        class="cart-link"
+        title="سلة المشتريات"
+        aria-label="سلة المشتريات">
+
+        🛒
+
+        <span id="cart-count"></span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<!-- ==================================================
+     MENU BUTTON
+================================================== -->
+
+<button
+  id="open-sidebar"
+  class="menu-btn"
+  aria-label="فتح القائمة">
+
+  ☰ القائمة
+
+</button>
+
+
+
+<!-- OVERLAY -->
+
+<div
+  id="overlay"
+  class="overlay">
+</div>
+
+
+
+<!-- ==================================================
+     SIDEBAR
+================================================== -->
+
+<aside
+  id="sidebar"
+  class="sidebar">
+
+
+  <div class="sidebar-header">
+
+    <span class="sidebar-title">
+
+      Chika Kids 🧸
+
+    </span>
+
+
+    <button
+      id="close-sidebar"
+      class="close-btn"
+      aria-label="إغلاق القائمة">
+
+      ✖
+
+    </button>
+
+  </div>
+
+
+
+  <!-- SEARCH -->
+
+  <div class="search-box mt-3">
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="ابحث عن ملابس الأطفال..."
+      class="form-control"
+      autocomplete="off">
+
+  </div>
+
+
+
+  <!-- SEARCH RESULTS -->
+
+  <ul id="searchResults"></ul>
+
+
+
+  <!-- MENU -->
+
+  <ul>
+
+
+    <li>
+
+      <a href="index.html">
+
+        <i class="bi bi-house-door-fill"></i>
+
+        الرئيسية
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="product1.html">
+
+        <i class="bi bi-gender-female"></i>
+
+        ملابس البنات
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="product2.html">
+
+        <i class="bi bi-gender-male"></i>
+
+        ملابس الأولاد
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="product3.html">
+
+        <i class="bi bi-stars"></i>
+
+        أطقم الأطفال
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="product4.html">
+
+        <i class="bi bi-balloon"></i>
+
+        ملابس المواليد
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="offers.html">
+
+        <i class="bi bi-fire"></i>
+
+        العروض
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="cart.html">
+
+        <i class="bi bi-cart-fill"></i>
+
+        سلة المشتريات
+
+      </a>
+
+    </li>
+
+
+
+    <!-- ADMIN -->
+
+    <li>
+
+      <a
+        href="admin-login.html"
+        class="admin-link">
+
+        <i class="bi bi-person-lock"></i>
+
+        دخول الإدارة
+
+      </a>
+
+    </li>
+
+
+
+    <li>
+
+      <a href="contact.html">
+
+        <i class="bi bi-telephone-fill"></i>
+
+        تواصل معنا
+
+      </a>
+
+    </li>
+
+  </ul>
+
+</aside>
+
+
+
+<!-- ==================================================
+     MOVING TEXT
+================================================== -->
+
+<div class="moving-text">
+
+  <div class="text-content">
+
+    🧸 تشكيلة جديدة من ملابس الأطفال
+
+    👗 فساتين |
+
+    أطقم |
+
+    ملابس أولاد |
+
+    ملابس مواليد 👕
+
+    أسعار مناسبة وتوصيل إلى 58 ولاية 🚚
+
+  </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     MAIN
+================================================== -->
+
+<main>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <img
+      src="images2/kids-banner.jpg"
+      alt="تشكيلة ملابس الأطفال Chika Kids"
+      loading="eager">
+
+  </section>
+
+
+
+  <!-- PROMO -->
+
+  <section class="promo">
+
+    <h2>
+
+      أناقة صغيرة... وفرحة كبيرة 💕
+
+    </h2>
+
+
+    <p>
+
+      اكتشفي أجمل ملابس الأطفال بتصاميم عصرية ومريحة،
+
+      مناسبة للحفلات والخروج والاستعمال اليومي.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       NEW PRODUCTS
+  ================================================== -->
+
+  <h2 class="section-heading">
+
+    وصل حديثاً 🧸
+
+  </h2>
+
+
+
+  <div class="swiper mySwiper">
+
+    <div
+      id="productsContainer"
+      class="swiper-wrapper">
+
+
+      <!-- PRODUCT 1 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/1.html'">
+
+        <img
+          src="images2/kids1.jpg"
+          alt="فستان بنات أنيق"
+          loading="lazy">
+
+        <p class="card-title">
+
+          فستان بنات أنيق للصيف
+
+        </p>
+
+        <p class="price">
+
+          1800 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 2 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/2.html'">
+
+        <img
+          src="images2/kids2.jpg"
+          alt="طقم أولاد"
+          loading="lazy">
+
+        <p class="card-title">
+
+          طقم أولاد صيفي مريح
+
+        </p>
+
+        <p class="price">
+
+          1600 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 3 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/3.html'">
+
+        <img
+          src="images2/kids3.jpg"
+          alt="طقم بنات"
+          loading="lazy">
+
+        <p class="card-title">
+
+          طقم بنات قطني أنيق
+
+        </p>
+
+        <p class="price">
+
+          1500 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 4 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/4.html'">
+
+        <img
+          src="images2/kids4.jpg"
+          alt="ملابس مواليد"
+          loading="lazy">
+
+        <p class="card-title">
+
+          طقم مواليد ناعم ومريح
+
+        </p>
+
+        <p class="price">
+
+          1400 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 5 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/5.html'">
+
+        <img
+          src="images2/kids5.jpg"
+          alt="بيجاما أطفال"
+          loading="lazy">
+
+        <p class="card-title">
+
+          بيجاما أطفال قطنية
+
+        </p>
+
+        <p class="price">
+
+          1200 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 6 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/6.html'">
+
+        <img
+          src="images2/kids6.jpg"
+          alt="ملابس رياضية للأطفال"
+          loading="lazy">
+
+        <p class="card-title">
+
+          طقم رياضي للأطفال
+
+        </p>
+
+        <p class="price">
+
+          1700 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 7 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/7.html'">
+
+        <img
+          src="images2/kids7.jpg"
+          alt="جاكيت أطفال"
+          loading="lazy">
+
+        <p class="card-title">
+
+          جاكيت أطفال خفيف وأنيق
+
+        </p>
+
+        <p class="price">
+
+          2200 DA
+
+        </p>
+
+      </div>
+
+
+
+      <!-- PRODUCT 8 -->
+
+      <div
+        class="swiper-slide special-card"
+        onclick="location.href='p1/8.html'">
+
+        <img
+          src="images2/kids8.jpg"
+          alt="فستان حفلات للأطفال"
+          loading="lazy">
+
+        <p class="card-title">
+
+          فستان حفلات للبنات
+
+        </p>
+
+        <p class="price">
+
+          2500 DA
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-button-prev"></div>
+
+    <div class="swiper-pagination"></div>
+
+  </div>
+
+
+
+  <!-- ==================================================
+       CATEGORIES
+  ================================================== -->
+
+  <h2 class="section-heading">
+
+    تسوق حسب الفئة 👕
+  
+  </h2>
+
+
+
+  <section class="container py-3">
+
+    <div class="row g-4">
+
+
+      <!-- GIRLS -->
+
+      <div class="col-6 col-lg-3">
+
+        <div
+          class="category-card"
+          onclick="location.href='product1.html'">
+
+          <img
+            src="images2/girls.jpg"
+            alt="ملابس البنات"
+            loading="lazy">
+
+
+          <div class="card-body">
+
+            <h3>
+
+              ملابس البنات 👗
+
+            </h3>
+
+
+            <a class="btn btn-kids">
+
+              اكتشفي المجموعة
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- BOYS -->
+
+      <div class="col-6 col-lg-3">
+
+        <div
+          class="category-card"
+          onclick="location.href='product2.html'">
+
+          <img
+            src="images2/boys.jpg"
+            alt="ملابس الأولاد"
+            loading="lazy">
+
+
+          <div class="card-body">
+
+            <h3>
+
+              ملابس الأولاد 👕
+
+            </h3>
+
+
+            <a class="btn btn-kids">
+
+              اكتشف المجموعة
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- SETS -->
+
+      <div class="col-6 col-lg-3">
+
+        <div
+          class="category-card"
+          onclick="location.href='product3.html'">
+
+          <img
+            src="images2/sets.jpg"
+            alt="أطقم الأطفال"
+            loading="lazy">
+
+
+          <div class="card-body">
+
+            <h3>
+
+              الأطقم 🧸
+
+            </h3>
+
+
+            <a class="btn btn-kids">
+
+              شاهد الأطقم
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- BABY -->
+
+      <div class="col-6 col-lg-3">
+
+        <div
+          class="category-card"
+          onclick="location.href='product4.html'">
+
+          <img
+            src="images2/baby.jpg"
+            alt="ملابس المواليد"
+            loading="lazy">
+
+
+          <div class="card-body">
+
+            <h3>
+
+              المواليد 👶
+
+            </h3>
+
+
+            <a class="btn btn-kids">
+
+              شاهد المجموعة
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       FEATURES
+  ================================================== -->
+
+  <section class="features">
+
+    <h2 class="section-heading">
+
+      لماذا Chika Kids؟
+
+    </h2>
+
+
+    <div class="container">
+
+      <div class="row g-3">
+
+
+        <div class="col-6 col-lg-3 feature-box">
+
+          <i class="bi bi-truck"></i>
+
+          <h4>
+
+            توصيل إلى 58 ولاية
+
+          </h4>
+
+          <p>
+
+            نوصّل طلبك إلى مختلف مناطق الوطن.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="col-6 col-lg-3 feature-box">
+
+          <i class="bi bi-cash-coin"></i>
+
+          <h4>
+
+            الدفع عند الاستلام
+
+          </h4>
+
+          <p>
+
+            ادفع عند استلام طلبك.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="col-6 col-lg-3 feature-box">
+
+          <i class="bi bi-heart"></i>
+
+          <h4>
+
+            اختيارات للأطفال
+
+          </h4>
+
+          <p>
+
+            موديلات متنوعة للصغار.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="col-6 col-lg-3 feature-box">
+
+          <i class="bi bi-headset"></i>
+
+          <h4>
+
+            خدمة العملاء
+
+          </h4>
+
+          <p>
+
+            نحن هنا لمساعدتك قبل وبعد الطلب.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       STORE INFORMATION
+  ================================================== -->
+
+  <section class="container py-4">
+
+    <h2 class="section-heading">
+
+      معلومات المتجر
+
+    </h2>
+
+
+    <ul class="classic-menu">
+
+
+      <li>
+
+        <a
+          href="#privacy"
+          onclick="showSection('privacy')">
+
+          🔒 سياسة الخصوصية
+
+        </a>
+
+      </li>
+
+
+
+      <li>
+
+        <a
+          href="#contact"
+          onclick="showSection('contact')">
+
+          📞 اتصل بنا
+
+        </a>
+
+      </li>
+
+
+
+      <li>
+
+        <a
+          href="#faq"
+          onclick="showSection('faq')">
+
+          ❓ الأسئلة المتكررة
+
+        </a>
+
+      </li>
+
+
+
+      <li>
+
+        <a
+          href="#about"
+          onclick="showSection('about')">
+
+          🏪 عن Chika Kids
+
+        </a>
+
+      </li>
+
+
+
+      <li>
+
+        <a
+          href="#payment"
+          onclick="showSection('payment')">
+
+          💳 طرق الدفع
+
+        </a>
+
+      </li>
+
+
+
+      <li>
+
+        <a
+          href="#shipping"
+          onclick="showSection('shipping')">
+
+          🚚 الشحن والتسليم
+
+        </a>
+
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- PRIVACY -->
+
+  <section
+    id="privacy"
+    class="hidden-section">
+
+    <h2>
+
+      🔒 سياسة الخصوصية
+
+    </h2>
+
+
+    <p>
+
+      نحترم خصوصية عملائنا ونستخدم البيانات التي يقدمها العميل لمعالجة الطلب،
+
+      التواصل بشأنه، وتحسين تجربة التسوق.
+
+    </p>
+
+
+    <ul>
+
+      <li>الاسم الكامل.</li>
+
+      <li>رقم الهاتف.</li>
+
+      <li>عنوان التوصيل.</li>
+
+      <li>تفاصيل المنتجات المطلوبة.</li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section
+    id="contact"
+    class="hidden-section">
+
+    <h2>
+
+      📞 اتصل بنا
+
+    </h2>
+
+
+    <p>
+
+      للطلبات والاستفسارات:
+
+    </p>
+
+
+    <ul>
+
+      <li>
+
+        📧 البريد:
+
+        <a href="mailto:chikastore158@gmail.com">
+
+          chikastore158@gmail.com
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        📞 الهاتف:
+
+        <a href="tel:0552973177">
+
+          0552973177
+
+        </a>
+
+      </li>
+
+
+      <li>
+
+        🟢 واتساب:
+
+        <a
+          href="https://wa.me/213552973177"
+          target="_blank"
+          rel="noopener">
+
+          راسلنا على واتساب
+
+        </a>
+
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- FAQ -->
+
+  <section
+    id="faq"
+    class="hidden-section">
+
+    <h2>
+
+      ❓ الأسئلة المتكررة
+
+    </h2>
+
+
+    <h4>
+
+      كيف يمكنني تقديم طلب؟
+
+    </h4>
+
+
+    <p>
+
+      اختر المنتج والمقاس واللون، ثم أضفه إلى السلة وأكمل بيانات الطلب.
+
+    </p>
+
+
+    <h4>
+
+      ما المقاسات المتوفرة؟
+
+    </h4>
+
+
+    <p>
+
+      تختلف المقاسات حسب المنتج والعمر.
+
+      يرجى مراجعة المقاسات الموجودة في صفحة كل منتج.
+
+    </p>
+
+
+    <h4>
+
+      هل يوجد الدفع عند الاستلام؟
+
+    </h4>
+
+
+    <p>
+
+      نعم، الدفع عند الاستلام متاح حسب منطقة التوصيل.
+
+    </p>
+
+
+    <h4>
+
+      كم يستغرق التوصيل؟
+
+    </h4>
+
+
+    <p>
+
+      عادةً من 1 إلى 5 أيام حسب الولاية وشركة الشحن.
+
+    </p>
+
+
+    <h4>
+
+      هل يمكن الاستبدال؟
+
+    </h4>
+
+
+    <p>
+
+      يمكن طلب الاستبدال وفق شروط وسياسة المتجر،
+
+      مع ضرورة التواصل معنا في أقرب وقت بعد الاستلام.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- ABOUT -->
+
+  <section
+    id="about"
+    class="hidden-section">
+
+    <h2>
+
+      🏪 عن Chika Kids
+
+    </h2>
+
+
+    <p>
+
+      مرحباً بكم في Chika Kids، متجر إلكتروني متخصص في ملابس الأطفال.
+
+      نقدم تشكيلة متنوعة من الملابس للبنات والأولاد والمواليد،
+
+      مع الحرص على الجمع بين الأناقة والراحة والأسعار المناسبة.
+
+    </p>
+
+
+    <p>
+
+      هدفنا هو توفير تجربة شراء سهلة للعائلات
+
+      مع خدمة توصيل إلى مختلف الولايات.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- PAYMENT -->
+
+  <section
+    id="payment"
+    class="hidden-section">
+
+    <h2>
+
+      💳 طرق الدفع
+
+    </h2>
+
+
+    <ul>
+
+      <li>
+
+        الدفع نقداً عند الاستلام.
+
+      </li>
+
+
+      <li>
+
+        وسائل دفع إلكترونية إذا كانت متاحة للمتجر.
+
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- SHIPPING -->
+
+  <section
+    id="shipping"
+    class="hidden-section">
+
+    <h2>
+
+      🚚 الشحن والتسليم
+
+    </h2>
+
+
+    <p>
+
+      التوصيل متاح إلى 58 ولاية.
+
+    </p>
+
+
+    <ul>
+
+      <li>
+
+        التوصيل إلى المكتب حسب الولاية وشركة الشحن.
+
+      </li>
+
+
+      <li>
+
+        التوصيل إلى باب المنزل حسب توفر الخدمة.
+
+      </li>
+
+
+      <li>
+
+        مدة التوصيل تختلف حسب الولاية.
+
+      </li>
+
+    </ul>
+
+
+    <p>
+
+      يرجى التأكد من صحة الاسم ورقم الهاتف والولاية والعنوان
+
+      عند تقديم الطلب.
+
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+  <div class="footer-brand">
+
+    Chika Kids 🧸
+
+  </div>
+
+  متجر ملابس الأطفال
+
+  <br>
+
+  جميع الحقوق محفوظة © 2026
+
+  <br>
+
+  سياسة الخصوصية |
+
+  سياسة الاستبدال |
+
+  الشحن |
+
+  معلومات الاتصال
+
+</footer>
+
+
+
+<!-- ==================================================
+     LIBRARIES
+================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+
+/* ==================================================
+   DEFAULT PRODUCTS
+================================================== */
+
+const defaultProducts = [
+
+  {
+    id: 1,
+    name: "فستان بنات أنيق للصيف",
+    category: "ملابس البنات",
+    price: 1800,
+    image: "images2/kids1.jpg",
+    url: "p1/1.html"
+  },
+
+  {
+    id: 2,
+    name: "طقم أولاد صيفي مريح",
+    category: "ملابس الأولاد",
+    price: 1600,
+    image: "images2/kids2.jpg",
+    url: "p1/2.html"
+  },
+
+  {
+    id: 3,
+    name: "طقم بنات قطني أنيق",
+    category: "ملابس البنات",
+    price: 1500,
+    image: "images2/kids3.jpg",
+    url: "p1/3.html"
+  },
+
+  {
+    id: 4,
+    name: "طقم مواليد ناعم ومريح",
+    category: "ملابس المواليد",
+    price: 1400,
+    image: "images2/kids4.jpg",
+    url: "p1/4.html"
+  },
+
+  {
+    id: 5,
+    name: "بيجاما أطفال قطنية",
+    category: "ملابس النوم",
+    price: 1200,
+    image: "images2/kids5.jpg",
+    url: "p1/5.html"
+  },
+
+  {
+    id: 6,
+    name: "طقم رياضي للأطفال",
+    category: "ملابس رياضية",
+    price: 1700,
+    image: "images2/kids6.jpg",
+    url: "p1/6.html"
+  },
+
+  {
+    id: 7,
+    name: "جاكيت أطفال خفيف وأنيق",
+    category: "ملابس الأطفال",
+    price: 2200,
+    image: "images2/kids7.jpg",
+    url: "p1/7.html"
+  },
+
+  {
+    id: 8,
+    name: "فستان حفلات للبنات",
+    category: "فساتين الأطفال",
+    price: 2500,
+    image: "images2/kids8.jpg",
+    url: "p1/8.html"
+  }
+
+];
+
+
+
+/* ==================================================
+   SWIPER
+================================================== */
+
+let swiper = new Swiper(".mySwiper", {
+
+  slidesPerView: 2.5,
+
+  spaceBetween: 15,
+
+  loop: true,
+
+  autoplay: {
+
+    delay: 3500,
+
+    disableOnInteraction: false
+
+  },
+
+  pagination: {
+
+    el: ".swiper-pagination",
+
+    clickable: true
+
+  },
+
+  navigation: {
+
+    nextEl: ".swiper-button-next",
+
+    prevEl: ".swiper-button-prev"
+
+  },
+
+  breakpoints: {
+
+    0: {
+
+      slidesPerView: 2
+
+    },
+
+    576: {
+
+      slidesPerView: 2.5
+
+    },
+
+    768: {
+
+      slidesPerView: 3
+
+    },
+
+    992: {
+
+      slidesPerView: 4
+
+    }
+
+  }
+
+});
+
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+const openBtn =
+  document.getElementById("open-sidebar");
+
+
+const closeBtn =
+  document.getElementById("close-sidebar");
+
+
+const sidebar =
+  document.getElementById("sidebar");
+
+
+const overlay =
+  document.getElementById("overlay");
+
+
+function closeSidebar() {
+
+  sidebar.classList.remove("active");
+
+  overlay.classList.remove("active");
+
+}
+
+
+openBtn.addEventListener("click", () => {
+
+  sidebar.classList.add("active");
+
+  overlay.classList.add("active");
+
+});
+
+
+closeBtn.addEventListener(
+  "click",
+  closeSidebar
+);
+
+
+overlay.addEventListener(
+  "click",
+  closeSidebar
+);
+
+
+document
+  .querySelectorAll(".sidebar a")
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      closeSidebar
+    );
+
+  });
+
+
+
+/* ==================================================
+   INFORMATION SECTIONS
+================================================== */
+
+function showSection(id) {
+
+  document
+    .querySelectorAll(".hidden-section")
+    .forEach(section => {
+
+      section.style.display = "none";
+
+    });
+
+
+  const target =
+    document.getElementById(id);
+
+
+  if (target) {
+
+    target.style.display = "block";
+
+    target.scrollIntoView({
+
+      behavior: "smooth",
+
+      block: "start"
+
+    });
+
+  }
+
+}
+
+
+
+/* ==================================================
+   SEARCH PRODUCTS
+================================================== */
+
+let products = [...defaultProducts];
+
+
+const searchInput =
+  document.getElementById("searchInput");
+
+
+const resultsContainer =
+  document.getElementById("searchResults");
+
+
+searchInput.addEventListener(
+  "input",
+  function () {
+
+    const query =
+      this.value
+        .trim()
+        .toLowerCase();
+
+
+    resultsContainer.innerHTML = "";
+
+
+    if (!query) {
+
+      return;
+
+    }
+
+
+    const results =
+      products.filter(product =>
+
+        product.name
+          .toLowerCase()
+          .includes(query)
+
+        ||
+
+        product.category
+          .toLowerCase()
+          .includes(query)
+
+      );
+
+
+    if (!results.length) {
+
+      resultsContainer.innerHTML =
+        "<li>لا توجد منتجات مطابقة.</li>";
+
+      return;
+
+    }
+
+
+    results.forEach(product => {
+
+      const li =
+        document.createElement("li");
+
+
+      const a =
+        document.createElement("a");
+
+
+      a.href =
+        product.url || "#";
+
+
+      a.textContent =
+        product.name;
+
+
+      li.appendChild(a);
+
+
+      resultsContainer.appendChild(li);
+
+    });
+
+  });
+
+
+
+/* ==================================================
+   CART COUNT
+================================================== */
+
+function updateCartCount() {
+
+  let cart = [];
+
+
+  try {
+
+    cart =
+      JSON.parse(
+        localStorage.getItem("cart")
+      ) || [];
+
+  }
+
+  catch (error) {
+
+    cart = [];
+
+  }
+
+
+  const countSpan =
+    document.getElementById("cart-count");
+
+
+  if (cart.length > 0) {
+
+    countSpan.textContent =
+      cart.length;
+
+    countSpan.style.display =
+      "inline-block";
+
+  }
+
+  else {
+
+    countSpan.style.display =
+      "none";
+
+  }
+
+}
+
+
+
+/* ==================================================
+   ADD TO CART
+================================================== */
+
+function addToCart(product) {
+
+  let cart = [];
+
+
+  try {
+
+    cart =
+      JSON.parse(
+        localStorage.getItem("cart")
+      ) || [];
+
+  }
+
+  catch (error) {
+
+    cart = [];
+
+  }
+
+
+  cart.push(product);
+
+
+  localStorage.setItem(
+    "cart",
+    JSON.stringify(cart)
+  );
+
+
+  updateCartCount();
+
+}
+
+
+
+/* ==================================================
+   ADMIN AUTHENTICATION
+================================================== */
+
+async function checkAdmin() {
+
+  const token =
+    localStorage.getItem("adminToken");
+
+
+  if (!token) {
+
+    return false;
+
+  }
+
+
+  try {
+
+    const response =
+      await fetch("/api/admin/me", {
+
+        method: "GET",
+
+        headers: {
+
+          "Authorization":
+            `Bearer ${token}`,
+
+          "Content-Type":
+            "application/json"
+
+        }
+
+      });
+
+
+    if (!response.ok) {
+
+      localStorage.removeItem("adminToken");
+
+      return false;
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    if (data.success) {
+
+      document
+        .getElementById("adminBar")
+        .style.display = "flex";
+
+      return true;
+
+    }
+
+
+    localStorage.removeItem("adminToken");
+
+    return false;
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "Admin verification error:",
+      error
+    );
+
+    return false;
+
+  }
+
+}
+
+
+
+/* ==================================================
+   ADMIN PRODUCTS PAGE
+================================================== */
+
+function openAdminProducts() {
+
+  window.location.href =
+    "admin-products.html";
+
+}
+
+
+
+/* ==================================================
+   ADD PRODUCT
+================================================== */
+
+function addNewProduct() {
+
+  window.location.href =
+    "admin-products.html?action=add";
+
+}
+
+
+
+/* ==================================================
+   ADMIN LOGOUT
+================================================== */
+
+function adminLogout() {
+
+  localStorage.removeItem(
+    "adminToken"
+  );
+
+  window.location.href =
+    "admin-login.html";
+
+}
+
+
+
+/* ==================================================
+   LOAD PRODUCTS FROM BACKEND
+================================================== */
+
+async function loadProducts() {
+
+  try {
+
+    const response =
+      await fetch("/api/products");
+
+
+    if (!response.ok) {
+
+      console.log(
+        "Backend products unavailable. Using default products."
+      );
+
+      return;
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    if (
+      data.success &&
+      Array.isArray(data.products) &&
+      data.products.length > 0
+    ) {
+
+      products =
+        data.products;
+
+      renderProducts();
+
+    }
+
+  }
+
+  catch (error) {
+
+    console.log(
+      "Products API unavailable. Using default products."
+    );
+
+  }
+
+}
+
+
+
+/* ==================================================
+   RENDER PRODUCTS
+================================================== */
+
+function renderProducts() {
+
+  const container =
+    document.getElementById(
+      "productsContainer"
+    );
+
+
+  if (!container) {
+
+    return;
+
+  }
+
+
+  if (!products.length) {
+
+    container.innerHTML = `
+
+      <div class="swiper-slide special-card">
+
+        <p class="card-title">
+
+          لا توجد منتجات حالياً
+
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  container.innerHTML =
+    products.map(product => {
+
+      return `
+
+        <div
+          class="swiper-slide special-card"
+          onclick="openProduct('${product.url || "#"}')">
+
+          <img
+            src="${product.image || "images2/kids1.jpg"}"
+            alt="${product.name || "منتج Chika Kids"}"
+            loading="lazy">
+
+          <p class="card-title">
+
+            ${product.name || ""}
+
+          </p>
+
+          <p class="price">
+
+            ${Number(product.price || 0).toLocaleString("fr-DZ")} DA
+
+          </p>
+
+        </div>
+
+      `;
+
+    }).join("");
+
+
+  if (swiper) {
+
+    swiper.destroy(
+      true,
+      true
+    );
+
+  }
+
+
+  swiper = new Swiper(
+    ".mySwiper",
+    {
+
+      slidesPerView: 2,
+
+      spaceBetween: 15,
+
+      loop: products.length > 3,
+
+      autoplay: {
+
+        delay: 3500,
+
+        disableOnInteraction: false
+
+      },
+
+      pagination: {
+
+        el: ".swiper-pagination",
+
+        clickable: true
+
+      },
+
+      navigation: {
+
+        nextEl: ".swiper-button-next",
+
+        prevEl: ".swiper-button-prev"
+
+      },
+
+      breakpoints: {
+
+        0: {
+
+          slidesPerView: 2
+
+        },
+
+        576: {
+
+          slidesPerView: 2.5
+
+        },
+
+        768: {
+
+          slidesPerView: 3
+
+        },
+
+        992: {
+
+          slidesPerView: 4
+
+        }
+
+      }
+
+    }
+
+  );
+
+}
+
+
+
+/* ==================================================
+   OPEN PRODUCT
+================================================== */
+
+function openProduct(url) {
+
+  if (!url || url === "#") {
+
+    return;
+
+  }
+
+
+  window.location.href =
+    url;
+
+}
+
+
+
+/* ==================================================
+   INITIALIZE
+================================================== */
+
+updateCartCount();
+
+checkAdmin();
+
+loadProducts();
+
+</script>
+
+
+</body>
+
+</html>
